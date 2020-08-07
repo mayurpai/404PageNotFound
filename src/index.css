@@ -1,13 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#bg {
+    height: 100vh;
+    width: 100vw;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Bangers', cursive;
+    color: springgreen;
+    top: -190px;
+    left: 0px;
+    line-height: 70px;
+    font-size: 80px;
+}
+
+p {
+    position: absolute;
+    font-family: 'Ravi Prakash', cursive;
+    color: #9ccc9c;
+    top: 70px;
+    font-size: large;
+    height: 20px;
+    width: 370px;
+}
+
+header {
+    position: absolute;
+    font-family: 'Fruktur', cursive;
+    color: springgreen;
+    top: 5%;
+    font-size: 30px;
+    left: 295px;
+}
+
+footer {
+    position: absolute;
+    font-family: 'Fruktur', cursive;
+    color: springgreen;
+    bottom: 5%;
+    font-size: 15px;
+    left: 46.5%;
+}
+
+.mainDiv {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#crow {
+    position: absolute;
+    height: 450px;
+    width: 450px;
+    top: 19%;
+    left: 10%;
+    z-index: 1;
+    animation: circle alternate-reverse 2s infinite;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    position: absolute;
+    height: 570px;
+    width: 570px;
+    top: 11%;
+    left: 6.5%;
+    background-color: rgba(0, 255, 128, 0.678);
+    border-radius: 100%;
+}
+
+.content {
+    position: absolute;
+    height: 200px;
+    width: 600px;
+    top: 40%;
+    right: 10%;
+    border: 3px solid springgreen;
+    padding: 50px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top: 1px solid transparent;
+    background-color: transparent;
+}
+
+button {
+    position: absolute;
+    font-family: 'Source Code Pro', monospace;
+    top: 60%;
+    right: 38.4%;
+    background-image: linear-gradient(to right, greenyellow 0%, springgreen 100%);
+    font-weight: bolder;
+    font-size: 15px;
+    border-radius: 40px;
+    width: 200px;
+    height: 40px;
+    padding: 8px;
+}
+
+@keyframes moves {
+    0% {
+        background-image: linear-gradient(to right, springgreen 0%, greenyellow 100%);
+        transition: linear 1s;
+        transform: scale(1);
+    }
+    100% {
+        background-image: linear-gradient(to left, greenyellow 0%, springgreen 100%);
+        transform: scale(1.2);
+    }
+}
+
+button:hover {
+    background-position: right center;
+    transform: scale(1.1);
+    animation: moves alternate 0.1s infinite;
+    transition: linear 0.1s;
+}
+
+#one :hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: ease-in-out 0.1s;
+    color: #111;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        color: aqua;
+        width: auto;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        color: #111;
+        width: auto;
+        transform: translateX(30px);
+    }
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        width: auto;
+        transform: translateX(0px);
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        width: auto;
+        transform: translateX(10px);
+        transform: translateY(0px);
+    }
+}
+
+ul li {
+    font-weight: bold;
+    float: left;
+    list-style-type: none;    
+}
+
+
+ul li:nth-child(1) {
+    animation: move linear 0.3s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(2) {
+    animation: move linear 0.4s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(3) {
+    animation: move linear 0.5s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(4) {
+    animation: move linear 0.6s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(5) {
+    animation: move linear 0.7s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(6) {
+    animation: move linear 0.8s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(7) {
+    animation: move linear 0.9s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(8) {
+    animation: move linear 1.0s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(9) {
+    animation: move linear 1.1s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(10) {
+    animation: move linear 1.2s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(11) {
+    animation: move linear 1.3s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(12) {
+    animation: move linear 1.4s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(13) {
+    animation: move linear 1.5s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(14) {
+    animation: move linear 1.6s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(15) {
+    animation: move linear 1.7s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(16) {
+    animation: move linear 1.8s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(17) {
+    animation: move linear 1.9s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(18) {
+    animation: move linear 2.0s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(19) {
+    animation: move linear 2.1s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(20) {
+    animation: move linear 2.2s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(21) {
+    animation: move linear 2.3s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(22) {
+    animation: move linear 2.4s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(23) {
+    animation: move linear 2.5s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(24) {
+    animation: move linear 2.6s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(25) {
+    animation: move linear 2.7s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(26) {
+    animation: move linear 2.8s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(27) {
+    animation: move linear 2.9s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(28) {
+    animation: move linear 3.0s, float alternate-reverse 3s infinite;
+}
+
+ul li:nth-child(29) {
+    animation: move linear 3.1s, float alternate-reverse 3s infinite;
 }
