@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import crow from './Scarecrow.png';
 import bg from './bg.jpg';
+import bubble from './bubble.png';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
         <header > 404 Not Found </header>
         <img id="crow" src = { crow } alt = "Scarecrow" / >
         <img id="bg" src = { bg } alt = "BG" / >
-        
+        <img id="bubble" src = { bubble } alt = "Bubble" / >
         <div className = "rotate" > </div>
         <div className = "content" >
                     <h1>
@@ -35,6 +36,7 @@ class App extends Component {
                         <li>F</li>
                         <li>o</li>
                         <li>r</li>
+                        <li>&nbsp;</li>
                         <br/>
                         <li>Y</li>
                         <li>o</li>
