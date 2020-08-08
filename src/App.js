@@ -47,7 +47,7 @@ class App extends Component {
                     </h1>
              <p > The Page You Are Looking For Might Be Removed Or Is Temporarily Unavailable. < /p> 
              </div > < button id = "one" > Back To Home Page </button> 
-             <footer >Copyright  2020</footer > 
+             <footer >Handcrafted with Love by Mayur Pai</footer > 
              </div >
     }
 }
