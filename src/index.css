@@ -2,9 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ravi+Prakash&display=swap');
 body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,38 +20,24 @@ h1 {
     position: absolute;
     font-family: 'Bangers', cursive;
     color: springgreen;
-    top: -190px;
-    left: 0px;
-    line-height: 70px;
-    font-size: 80px;
 }
 
 p {
     position: absolute;
     font-family: 'Ravi Prakash', cursive;
     color: #9ccc9c;
-    top: 70px;
-    font-size: large;
-    height: 20px;
-    width: 370px;
 }
 
 header {
     position: absolute;
     font-family: 'Fruktur', cursive;
     color: springgreen;
-    top: 5%;
-    font-size: 30px;
-    left: 295px;
 }
 
 footer {
     position: absolute;
     font-family: 'Fruktur', cursive;
     color: springgreen;
-    bottom: 5%;
-    font-size: 15px;
-    left: 46.5%;
 }
 
 .mainDiv {
@@ -65,12 +48,8 @@ footer {
 
 #crow {
     position: absolute;
-    height: 450px;
-    width: 450px;
-    top: 19%;
-    left: 10%;
     z-index: 1;
-    animation: circle alternate-reverse 2s infinite;
+    animation: circle alternate-reverse 4s infinite;
 }
 
 @keyframes circle {
@@ -84,50 +63,33 @@ footer {
 
 .rotate {
     position: absolute;
-    height: 570px;
-    width: 570px;
-    top: 11%;
-    left: 6.5%;
-    background-color: rgba(0, 255, 128, 0.678);
-    border-radius: 100%;
+    background-color: transparent;
 }
 
 .content {
     position: absolute;
-    height: 200px;
-    width: 600px;
-    top: 40%;
-    right: 10%;
     border: 3px solid springgreen;
-    padding: 50px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top: 1px solid transparent;
-    background-color: transparent;
+    background: linear-gradient(rgb(0, 255, 127, 0.6), transparent, rgb(218, 158, 212, 0.3), rgb(241, 195, 231, 0.8));
 }
 
 button {
     position: absolute;
     font-family: 'Source Code Pro', monospace;
-    top: 60%;
-    right: 38.4%;
-    background-image: linear-gradient(to right, greenyellow 0%, springgreen 100%);
+    background-image: linear-gradient(to right, rgb(218, 158, 212, 1) 0%, rgb(0, 255, 127, 0.6) 100%);
     font-weight: bolder;
-    font-size: 15px;
-    border-radius: 40px;
-    width: 200px;
-    height: 40px;
-    padding: 8px;
 }
 
 @keyframes moves {
     0% {
-        background-image: linear-gradient(to right, springgreen 0%, greenyellow 100%);
+        background-image: linear-gradient(to right, rgb(0, 255, 127, 0.6) 0%, rgb(218, 158, 212, 1) 100%);
         transition: linear 1s;
         transform: scale(1);
     }
     100% {
-        background-image: linear-gradient(to left, greenyellow 0%, springgreen 100%);
+        background-image: linear-gradient(to left rgb(218, 158, 212, 1) 0%, rgb(0, 255, 127, 0.6) 100%);
         transform: scale(1.2);
     }
 }
@@ -135,7 +97,7 @@ button {
 button:hover {
     background-position: right center;
     transform: scale(1.1);
-    animation: moves alternate 0.1s infinite;
+    animation: moves alternate 0.75s infinite;
     transition: linear 0.1s;
 }
 
@@ -176,12 +138,18 @@ button:hover {
     }
 }
 
+#bubble {
+    position: absolute;
+    border-radius: 100%;
+    background: transparent;
+    animation: circle alternate-reverse 3.75s infinite;
+}
+
 ul li {
     font-weight: bold;
     float: left;
-    list-style-type: none;    
+    list-style-type: none;
 }
-
 
 ul li:nth-child(1) {
     animation: move linear 0.3s, float alternate-reverse 3s infinite;
@@ -297,4 +265,135 @@ ul li:nth-child(28) {
 
 ul li:nth-child(29) {
     animation: move linear 3.1s, float alternate-reverse 3s infinite;
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    h1 {
+        top: -90px;
+        left: -10px;
+        line-height: 40px;
+        font-size: 40px;
+        width: 350px;
+    }
+    p {
+        top: 50px;
+        left: 28px;
+        font-size: large;
+        height: 20px;
+        width: 300px;
+    }
+    header {
+        top: 10px;
+        font-size: 15px;
+        left: 10px;
+    }
+    footer {
+        top: 700px;
+        font-size: 15px;
+        right: 38%;
+    }
+    .rotate {
+        height: 250px;
+        width: 250px;
+        top: 9%;
+        left: 13%;
+    }
+    #crow {
+        height: 220px;
+        width: 220px;
+        top: 9%;
+        left: 23%;
+    }
+    .content {
+        height: 180px;
+        width: 328px;
+        top: 45%;
+        left: 10px;
+        right: 10px;
+        padding: 20px;
+    }
+    button {
+        top: 60%;
+        left: 40px;
+        font-weight: bolder;
+        border-radius: 40px;
+        width: 150px;
+        height: 25px;
+        padding: 1px;
+    }
+    #bubble {
+        height: 300px;
+        width: 300px;
+        top: 5%;
+        left: 11.5%;
+    }
+}
+
+@media only screen and (min-width: 450px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    h1 {
+        top: -190px;
+        left: 0px;
+        line-height: 70px;
+        font-size: 80px;
+    }
+    p {
+        top: 70px;
+        font-size: large;
+        height: 20px;
+        width: 370px;
+    }
+    header {
+        top: 5%;
+        font-size: 30px;
+        left: 295px;
+    }
+    footer {
+        bottom: 5%;
+        font-size: 15px;
+        left: 46.5%;
+    }
+    #crow {
+        height: 450px;
+        width: 450px;
+        top: 19%;
+        left: 10%;
+    }
+    .rotate {
+        height: 570px;
+        width: 570px;
+        top: 11%;
+        left: 6.5%;
+    }
+    .content {
+        height: 200px;
+        width: 600px;
+        top: 40%;
+        right: 10%;
+        padding: 50px;
+    }
+    button {
+        top: 60%;
+        right: 38.4%;
+        font-weight: bolder;
+        border-radius: 40px;
+        width: 200px;
+        height: 40px;
+        padding: 8px;
+    }
+    #bubble {
+        height: 570px;
+        width: 570px;
+        top: 11%;
+        left: 6.5%;
+    }
 }
